@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Costa Azul · Hotel 4 estrellas frente al mar</title>
+<meta name="description" content="Hotel Costa Azul: hotel 4 estrellas frente a la playa en Viña del Mar. Reserva directa con disponibilidad en tiempo real, paquetes, temporadas y cupones de descuento.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230E6BA8'/%3E%3Cpath d='M4 17c3 0 3-2.5 6-2.5s3 2.5 6 2.5 3-2.5 6-2.5 3 2.5 6 2.5' stroke='%232EC4B6' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M4 23c3 0 3-2.5 6-2.5s3 2.5 6 2.5 3-2.5 6-2.5 3 2.5 6 2.5' stroke='%23FFFFFF' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ===================== 1. TOPBAR ===================== -->
+<div class="topbar">
+  <div class="wrap topbar-flex">
+    <div class="topbar-contacto">
+      <a href="tel:+56322987654" class="topbar-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+        +56 32 298 7654
+      </a>
+      <a href="mailto:reservas@hotelcostaazul.cl" class="topbar-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        reservas@hotelcostaazul.cl
+      </a>
+    </div>
+    <div class="topbar-canales">
+      <span class="topbar-tb">También en:</span>
+      <span class="mini-badge"><b class="mb-logo mb-booking">B.</b> Booking.com</span>
+      <span class="mini-badge"><b class="mb-logo mb-trivago">tr</b> trivago</span>
+      <span class="mini-badge"><b class="mb-logo mb-turismo">TC</b> Turismocity</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 2. HEADER ===================== -->
+<header class="header" id="header">
+  <div class="wrap header-flex">
+    <a href="#inicio" class="logo">
+      <svg class="logo-ola" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#0E6BA8"/>
+        <path d="M4 15c3 0 3-2.5 6-2.5s3 2.5 6 2.5 3-2.5 6-2.5 3 2.5 6 2.5" stroke="#2EC4B6" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M4 21c3 0 3-2.5 6-2.5s3 2.5 6 2.5 3-2.5 6-2.5 3 2.5 6 2.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-texto">
+        <strong>Hotel Costa Azul</strong>
+        <small>4 <span class="estrellas-logo">★★★★</span> · Frente al mar</small>
+      </span>
+    </a>
+    <nav class="nav" id="navPrincipal" aria-label="Navegación principal">
+      <a href="#inicio" class="nav-link">Inicio</a>
+      <a href="#habitaciones" class="nav-link">Habitaciones</a>
+      <a href="#paquetes" class="nav-link">Paquetes</a>
+      <a href="#temporadas" class="nav-link">Temporadas</a>
+      <a href="#galeria" class="nav-link">Galería</a>
+      <a href="#opiniones" class="nav-link">Opiniones</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+      <a href="#widget" class="btn btn-primario nav-cta">Reservar</a>
+    </nav>
+    <button class="hamb" id="btnMenu" aria-label="Abrir menú" aria-expanded="false" aria-controls="navPrincipal">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== 3. HERO + WIDGET ===================== -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-contenido">
+    <p class="hero-chip reveal">Hotel 4 estrellas · Primera línea de playa</p>
+    <h1 class="hero-titulo reveal">Tu escape frente al mar</h1>
+    <p class="hero-sub reveal">Despierta con el sonido de las olas en Viña del Mar. 20 habitaciones, gastronomía local y experiencias inolvidables. Reserva directo y obtén el mejor precio garantizado.</p>
+    <div class="hero-stats reveal">
+      <span>20 habitaciones</span><i></i><span>4.6/5 en opiniones</span><i></i><span>Recepción 24 horas</span>
+    </div>
+
+    <!-- Widget de reserva -->
+    <form class="widget reveal" id="widget" novalidate>
+      <div class="w-campo">
+        <label for="w-llegada">Llegada</label>
+        <input type="date" id="w-llegada" required>
+      </div>
+      <div class="w-campo">
+        <label for="w-salida">Salida</label>
+        <input type="date" id="w-salida" required>
+      </div>
+      <div class="w-campo">
+        <label for="w-adultos">Adultos</label>
+        <select id="w-adultos">
+          <option value="1">1 adulto</option>
+          <option value="2" selected>2 adultos</option>
+          <option value="3">3 adultos</option>
+          <option value="4">4 adultos</option>
+        </select>
+      </div>
+      <div class="w-campo">
+        <label for="w-ninos">Niños</label>
+        <select id="w-ninos">
+          <option value="0" selected>Sin niños</option>
+          <option value="1">1 niño</option>
+          <option value="2">2 niños</option>
+          <option value="3">3 niños</option>
+        </select>
+      </div>
+      <div class="w-campo">
+        <label for="w-cupon">Cupón <span class="opcional">(opcional)</span></label>
+        <input type="text" id="w-cupon" placeholder="Ej: VERANO10" autocomplete="off">
+      </div>
+      <div class="w-campo w-boton">
+        <button type="submit" class="btn btn-primario btn-grande">Ver disponibilidad</button>
+      </div>
+      <p class="w-error" id="w-error" role="alert" hidden></p>
+    </form>
+  </div>
+
+  <!-- Escena SVG del mar -->
+  <svg class="hero-mar" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="ola1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#2EC4B6"/><stop offset="1" stop-color="#0E6BA8"/>
+      </linearGradient>
+      <linearGradient id="ola2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#0E6BA8"/><stop offset="1" stop-color="#0A2E4F"/>
+      </linearGradient>
+      <radialGradient id="sol" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#FFE8B0"/><stop offset="1" stop-color="#FFC96B"/>
+      </radialGradient>
+    </defs>
+    <circle cx="1150" cy="90" r="52" fill="url(#sol)" opacity="0.95"/>
+    <circle cx="1150" cy="90" r="72" fill="#FFC96B" opacity="0.18"/>
+    <g stroke="#0A2E4F" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.55">
+      <path d="M230 110q11-12 22 0q11-12 22 0"/>
+      <path d="M300 80q9-10 18 0q9-10 18 0"/>
+      <path d="M420 130q8-9 16 0q8-9 16 0"/>
+    </g>
+    <path d="M0 250 C 200 210, 420 290, 720 250 S 1240 210, 1440 250 L1440 400 L0 400 Z" fill="url(#ola1)" opacity="0.45"/>
+    <path d="M0 290 C 220 250, 460 330, 760 290 S 1260 250, 1440 290 L1440 400 L0 400 Z" fill="url(#ola1)" opacity="0.7"/>
+    <path d="M0 330 C 240 295, 500 365, 800 330 S 1300 295, 1440 330 L1440 400 L0 400 Z" fill="url(#ola2)"/>
+  </svg>
+</section>
+
+<!-- ===================== 4. RESULTADOS DE DISPONIBILIDAD ===================== -->
+<section class="seccion" id="habitaciones">
+  <div class="wrap">
+    <div class="seccion-head reveal">
+      <div>
+        <p class="eyebrow">Disponibilidad en tiempo real</p>
+        <h2>Elige tu habitación</h2>
+        <p class="seccion-sub" id="resumen-busqueda">Selecciona tus fechas en el buscador para ver precios y disponibilidad.</p>
+      </div>
+      <p class="ticker" id="ticker" hidden>
+        <span class="ticker-punto"></span>Disponibilidad actualizada hace 0s
+      </p>
+    </div>
+    <div class="estado-vacio" id="estado-vacio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <p>Aún no has buscado fechas. Usa el buscador de arriba para conocer la disponibilidad y las tarifas ajustadas por temporada.</p>
+      <a href="#widget" class="btn btn-secundario">Buscar fechas</a>
+    </div>
+    <div class="resultados-grid" id="resultados"></div>
+  </div>
+</section>
+
+<!-- ===================== 5. ARMA TU PAQUETE ===================== -->
+<section class="seccion seccion-blanca" id="paquetes">
+  <div class="wrap">
+    <div class="seccion-head reveal">
+      <div>
+        <p class="eyebrow">Arma tu paquete</p>
+        <h2>Personaliza tu estadía</h2>
+        <p class="seccion-sub">Tres pasos simples: habitación, comidas y actividades. El total se actualiza en vivo.</p>
+      </div>
+    </div>
+    <div class="builder-grid">
+      <div class="builder-pasos">
+        <div class="paso-card reveal" id="paso1-card">
+          <div class="paso-head">
+            <span class="paso-num" data-num="1">1</span>
+            <div><h3>Tu habitación</h3><p class="paso-sub">La que seleccionaste en los resultados</p></div>
+          </div>
+          <div id="paso1-contenido"></div>
+        </div>
+        <div class="paso-card reveal" id="paso2-card">
+          <div class="paso-head">
+            <span class="paso-num" data-num="2">2</span>
+            <div><h3>Comidas</h3><p class="paso-sub">Precio por persona por día</p></div>
+          </div>
+          <div class="comidas-grid" id="lista-comidas" role="radiogroup" aria-label="Opciones de comida"></div>
+        </div>
+        <div class="paso-card reveal" id="paso3-card">
+          <div class="paso-head">
+            <span class="paso-num" data-num="3">3</span>
+            <div><h3>Actividades</h3><p class="paso-sub">Precio por persona, pago único</p></div>
+          </div>
+          <div class="acts-grid" id="lista-actividades"></div>
+        </div>
+      </div>
+
+      <!-- Resumen en vivo -->
+      <aside class="resumen reveal" id="resumen-panel" aria-live="polite">
+        <h3 class="resumen-titulo">Resumen de tu reserva</h3>
+        <div class="res-lineas" id="res-lineas">
+          <p class="res-vacio">Busca fechas y selecciona una habitación para ver el detalle de tu paquete aquí.</p>
+        </div>
+        <div class="res-cupon">
+          <label for="res-cupon">Cupón de descuento</label>
+          <div class="res-cupon-fila">
+            <input type="text" id="res-cupon" placeholder="Código" autocomplete="off">
+            <button class="btn btn-secundario" id="btn-aplicar-cupon" type="button">Aplicar</button>
+          </div>
+          <p class="res-cupon-msg" id="res-cupon-msg" hidden></p>
+          <div class="res-hint" id="res-hint" hidden>
+            <span>Consejo: tu estadía es de 7+ noches. Usa el cupón <b>LARGAESTANCIA</b> y obtén 20% de descuento.</span>
+            <button type="button" class="btn btn-coral btn-chico" id="btn-hint-aplicar">Aplicar</button>
+          </div>
+        </div>
+        <div class="res-total-fila" id="res-total-fila" hidden>
+          <span>Total</span>
+          <strong id="res-total">$0</strong>
+        </div>
+        <button class="btn btn-primario btn-grande btn-block" id="btn-confirmar" type="button">Confirmar reserva</button>
+        <p class="res-nota">Cancelación gratuita hasta 72 horas antes del check-in.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 7. TEMPORADAS ===================== -->
+<section class="seccion" id="temporadas">
+  <div class="wrap">
+    <div class="seccion-head reveal">
+      <div>
+        <p class="eyebrow">Tarifas claras</p>
+        <h2>Temporadas y tarifas</h2>
+        <p class="seccion-sub">Las tarifas se prorratean por noche según la temporada de cada fecha de tu estadía.</p>
+      </div>
+    </div>
+    <div class="temporadas-grid" id="grid-temporadas"></div>
+  </div>
+</section>
+
+<!-- ===================== 8. DESCUENTOS ACTIVOS ===================== -->
+<section class="seccion seccion-blanca" id="descuentos">
+  <div class="wrap">
+    <div class="seccion-head reveal">
+      <div>
+        <p class="eyebrow">Ofertas</p>
+        <h2>Descuentos activos</h2>
+        <p class="seccion-sub">Haz clic en un cupón para cargarlo en tu reserva.</p>
+      </div>
+    </div>
+    <div class="cupones-grid">
+      <button class="cupon-chip reveal" type="button" data-cupon="VERANO10">
+        <span class="cupon-pct">−10%</span>
+        <span class="cupon-codigo">VERANO10</span>
+        <span class="cupon-cond">Válido en cualquier fecha del año</span>
+      </button>
+      <button class="cupon-chip reveal" type="button" data-cupon="FAMILIA15">
+        <span class="cupon-pct">−15%</span>
+        <span class="cupon-codigo">FAMILIA15</span>
+        <span class="cupon-cond">Ideal para viajes en familia</span>
+      </button>
+      <button class="cupon-chip reveal" type="button" data-cupon="LARGAESTANCIA">
+        <span class="cupon-pct">−20%</span>
+        <span class="cupon-codigo">LARGAESTANCIA</span>
+        <span class="cupon-cond">Solo estadías de 7 o más noches</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 9. EXPERIENCIAS ===================== -->
+<section class="seccion" id="experiencias">
+  <div class="wrap">
+    <div class="seccion-head reveal">
+      <div>
+        <p class="eyebrow">Suma experiencias</p>
+        <h2>Comidas y actividades</h2>
+        <p class="seccion-sub">Todo lo que puedes agregar a tu paquete desde el armador.</p>
+      </div>
+    </div>
+    <h3 class="subtitulo-grupo reveal">Planes de comida <span>(por persona / día)</span></h3>
+    <div class="exp-grid" id="grid-comidas"></div>
+    <h3 class="subtitulo-grupo reveal">Actividades <span>(por persona, pago único)</span></h3>
+    <div class="exp-grid" id="grid-actividades"></div>
+  </div>
+</section>
+
+<!-- ===================== 10. GALERÍA ===================== -->
+<section class="seccion seccion-blanca" id="galeria">
+  <div class="wrap">
+    <div class="seccion-head reveal">
+      <div>
+        <p class="eyebrow">Recorre el hotel</p>
+        <h2>Galería</h2>
+      </div>
+    </div>
+    <div class="filtros reveal" id="filtros">
+      <button class="filtro activo" data-f="todas" type="button">Todas</button>
+      <button class="filtro" data-f="habitaciones" type="button">Habitaciones</button>
+      <button class="filtro" data-f="piscina" type="button">Piscina</button>
+      <button class="filtro" data-f="gastronomia" type="button">Gastronomía</button>
+      <button class="filtro" data-f="exteriores" type="button">Exteriores</button>
+    </div>
+    <div class="galeria-grid" id="grid-galeria"></div>
+  </div>
+</section>
+
+<!-- ===================== 11. CANALES DE VENTA ===================== -->
+<section class="seccion" id="canales">
+  <div class="wrap">
+    <div class="seccion-head reveal">
+      <div>
+        <p class="eyebrow">Presencia multicanal</p>
+        <h2>También nos encuentras en</h2>
+        <p class="seccion-sub">Sincronizados con los principales portales de reserva.</p>
+      </div>
+    </div>
+    <div class="canales-grid">
+      <article class="canal-card reveal">
+        <div class="canal-logo cl-booking"><b>B.</b><span>Booking.com</span></div>
+        <p>Tarifas y disponibilidad sincronizadas</p>
+        <span class="chip-conectado"><i></i>Conectado</span>
+      </article>
+      <article class="canal-card reveal">
+        <div class="canal-logo cl-trivago"><b>tr</b><span>trivago</span></div>
+        <p>Tarifas y disponibilidad sincronizadas</p>
+        <span class="chip-conectado"><i></i>Conectado</span>
+      </article>
+      <article class="canal-card reveal">
+        <div class="canal-logo cl-turismo"><b>TC</b><span>Turismocity</span></div>
+        <p>Tarifas y disponibilidad sincronizadas</p>
+        <span class="chip-conectado"><i></i>Conectado</span>
+      </article>
+      <article class="canal-card reveal">
+        <div class="canal-logo cl-despegar"><b>D</b><span>Despegar</span></div>
+        <p>Tarifas y disponibilidad sincronizadas</p>
+        <span class="chip-conectado"><i></i>Conectado</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 12. OPINIONES ===================== -->
+<section class="seccion seccion-blanca" id="opiniones">
+  <div class="wrap">
+    <div class="seccion-head reveal">
+      <div>
+        <p class="eyebrow">Reputación</p>
+        <h2>Lo que dicen nuestros huéspedes</h2>
+      </div>
+    </div>
+    <div class="opiniones-grid">
+      <article class="op-resumen reveal">
+        <div class="op-nota">4.6<span>/5</span></div>
+        <div class="op-estrellas" aria-label="4.6 de 5 estrellas">★★★★★</div>
+        <p class="op-total">Basado en 128 opiniones verificadas</p>
+        <div class="op-barras">
+          <div class="barra"><span>5★</span><div class="barra-fondo"><div class="barra-relleno" style="--w:68%"></div></div><span>68%</span></div>
+          <div class="barra"><span>4★</span><div class="barra-fondo"><div class="barra-relleno" style="--w:22%"></div></div><span>22%</span></div>
+          <div class="barra"><span>3★</span><div class="barra-fondo"><div class="barra-relleno" style="--w:7%"></div></div><span>7%</span></div>
+          <div class="barra"><span>2★</span><div class="barra-fondo"><div class="barra-relleno" style="--w:2%"></div></div><span>2%</span></div>
+          <div class="barra"><span>1★</span><div class="barra-fondo"><div class="barra-relleno" style="--w:1%"></div></div><span>1%</span></div>
+        </div>
+      </article>
+      <div class="op-lista">
+        <article class="op-card reveal">
+          <div class="op-card-head">
+            <div class="op-avatar" aria-hidden="true">MF</div>
+            <div><strong>María Fernanda Rojas</strong><small>12 de febrero de 2026</small></div>
+            <span class="op-nota-chip">5★</span>
+          </div>
+          <p>"La vista al mar desde el balcón superó nuestras expectativas. El desayuno buffet es variado y el personal siempre atento. Volveremos."</p>
+        </article>
+        <article class="op-card reveal">
+          <div class="op-card-head">
+            <div class="op-avatar" aria-hidden="true">JP</div>
+            <div><strong>Jorge Paredes</strong><small>3 de enero de 2026</small></div>
+            <span class="op-nota-chip">4★</span>
+          </div>
+          <p>"Muy buena ubicación frente a la playa y excelente relación precio-calidad en temporada media. La clase de surf fue un plus inesperado."</p>
+        </article>
+        <article class="op-card reveal">
+          <div class="op-card-head">
+            <div class="op-avatar" aria-hidden="true">CM</div>
+            <div><strong>Carolina Muñoz</strong><small>20 de julio de 2026</small></div>
+            <span class="op-nota-chip">5★</span>
+          </div>
+          <p>"Viajamos en temporada baja con el cupón LARGAESTANCIA y fue impecable: habitación familiar amplia y el spa maravilloso."</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 13. FAQ ===================== -->
+<section class="seccion" id="faq">
+  <div class="wrap wrap-estrecho">
+    <div class="seccion-head reveal">
+      <div>
+        <p class="eyebrow">Dudas frecuentes</p>
+        <h2>Preguntas frecuentes</h2>
+      </div>
+    </div>
+    <div class="faq-lista reveal">
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          ¿Cuáles son los horarios de check-in y check-out?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a"><p>El check-in es desde las 15:00 hrs y el check-out hasta las 12:00 hrs. Ofrecemos late check-out hasta las 18:00 hrs sujeto a disponibilidad, con un cargo del 50% de la tarifa de la noche.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          ¿Cuál es la política de cancelación?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a"><p>Puedes cancelar sin costo hasta 72 horas antes de la fecha de llegada. Cancelaciones posteriores o no show tienen un cargo equivalente a la primera noche de la reserva.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          ¿El hotel tiene estacionamiento?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a"><p>Sí. Contamos con estacionamiento privado gratuito para huéspedes, con vigilancia las 24 horas y acceso directo al lobby.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          ¿Aceptan mascotas?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a"><p>Aceptamos perros de hasta 10 kg con un cargo único de $15.000 por estadía. Debes notificarlo al momento de reservar para asignarte una habitación habilitada.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          ¿Cómo funcionan los cupones de descuento?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a"><p>Ingresa el código en el buscador o en el panel de resumen y el descuento se aplicará automáticamente sobre el total de tu paquete. El cupón LARGAESTANCIA solo es válido en estadías de 7 o más noches.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 14. CONTACTO + MAPA + FOOTER ===================== -->
+<section class="seccion seccion-blanca" id="contacto">
+  <div class="wrap">
+    <div class="seccion-head reveal">
+      <div>
+        <p class="eyebrow">Hablemos</p>
+        <h2>Contacto</h2>
+      </div>
+    </div>
+    <div class="contacto-grid">
+      <div class="contacto-info reveal">
+        <div class="c-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><strong>Dirección</strong><p>Av. Marina 1250, Reñaca, Viña del Mar, Chile</p></div>
+        </div>
+        <div class="c-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+          <div><strong>Teléfono</strong><p><a href="tel:+56322987654">+56 32 298 7654</a></p></div>
+        </div>
+        <div class="c-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          <div><strong>Email</strong><p><a href="mailto:reservas@hotelcostaazul.cl">reservas@hotelcostaazul.cl</a></p></div>
+        </div>
+        <div class="c-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div><strong>Recepción</strong><p>Abierta 24 horas, todos los días</p></div>
+        </div>
+
+        <form class="form-contacto" id="form-contacto" novalidate>
+          <h3>Escríbenos</h3>
+          <label for="c-nombre">Nombre</label>
+          <input type="text" id="c-nombre" placeholder="Tu nombre" autocomplete="name">
+          <label for="c-email">Email</label>
+          <input type="email" id="c-email" placeholder="tucorreo@ejemplo.cl" autocomplete="email">
+          <label for="c-mensaje">Mensaje</label>
+          <textarea id="c-mensaje" rows="4" placeholder="Cuéntanos en qué podemos ayudarte"></textarea>
+          <p class="c-error" id="c-error" role="alert" hidden></p>
+          <p class="c-ok" id="c-ok" hidden>¡Mensaje enviado! Te responderemos dentro de 24 horas hábiles.</p>
+          <button type="submit" class="btn btn-primario">Enviar mensaje</button>
+        </form>
+      </div>
+
+      <div class="mapa-card reveal">
+        <svg class="mapa" viewBox="0 0 800 520" role="img" aria-label="Mapa estilizado de la ubicación del Hotel Costa Azul frente a la playa">
+          <defs>
+            <linearGradient id="mapaMar" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#2EC4B6"/><stop offset="1" stop-color="#0E6BA8"/>
+            </linearGradient>
+          </defs>
+          <rect width="800" height="520" fill="#F7F4EE"/>
+          <path d="M520 0 C 480 140, 560 260, 510 400 C 490 460, 500 500, 495 520 L800 520 L800 0 Z" fill="url(#mapaMar)"/>
+          <path d="M520 0 C 480 140, 560 260, 510 400 C 490 460, 500 500, 495 520" fill="none" stroke="#F2E3C6" stroke-width="26" stroke-linecap="round"/>
+          <g stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6">
+            <path d="M600 120q18-10 36 0"/><path d="M660 220q18-10 36 0"/><path d="M610 330q18-10 36 0"/><path d="M690 90q14-8 28 0"/>
+          </g>
+          <path d="M120 0 L120 520" stroke="#E5E0D8" stroke-width="18"/>
+          <path d="M120 0 L120 520" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="16 14"/>
+          <path d="M0 380 L500 380" stroke="#E5E0D8" stroke-width="14"/>
+          <path d="M0 150 L480 150" stroke="#E5E0D8" stroke-width="10"/>
+          <text x="140" y="140" class="mapa-calle" font-size="15" fill="#8A8577">Av. Marina</text>
+          <text x="600" y="480" font-size="17" fill="#FFFFFF" font-weight="600">Océano Pacífico</text>
+          <text x="430" y="430" font-size="14" fill="#B09468">Playa</text>
+          <g>
+            <circle cx="380" cy="230" r="34" fill="#FF6B5B" opacity="0.18"/>
+            <circle cx="380" cy="230" r="15" fill="#FF6B5B"/>
+            <circle cx="380" cy="230" r="6" fill="#FFFFFF"/>
+          </g>
+          <text x="300" y="205" font-size="17" font-weight="700" fill="#0A2E4F">Hotel Costa Azul</text>
+          <g fill="#2EC4B6"><circle cx="452" cy="320" r="7"/><circle cx="470" cy="350" r="7"/><circle cx="440" cy="270" r="7"/></g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="footer-marca">
+      <a href="#inicio" class="logo logo-footer">
+        <svg class="logo-ola" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#0E6BA8"/>
+          <path d="M4 15c3 0 3-2.5 6-2.5s3 2.5 6 2.5 3-2.5 6-2.5 3 2.5 6 2.5" stroke="#2EC4B6" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M4 21c3 0 3-2.5 6-2.5s3 2.5 6 2.5 3-2.5 6-2.5 3 2.5 6 2.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-texto"><strong>Hotel Costa Azul</strong><small>4 ★★★★ · Frente al mar</small></span>
+      </a>
+      <p>Hotel 4 estrellas frente a la playa en Reñaca, Viña del Mar. Reserva directa con el mejor precio garantizado.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explora</h4>
+      <a href="#habitaciones">Habitaciones</a>
+      <a href="#paquetes">Arma tu paquete</a>
+      <a href="#temporadas">Temporadas</a>
+      <a href="#galeria">Galería</a>
+      <a href="#opiniones">Opiniones</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="tel:+56322987654">+56 32 298 7654</a>
+      <a href="mailto:reservas@hotelcostaazul.cl">reservas@hotelcostaazul.cl</a>
+      <span>Av. Marina 1250, Reñaca</span>
+      <span>Viña del Mar, Chile</span>
+    </div>
+    <div class="footer-col">
+      <h4>También en</h4>
+      <span class="mini-badge mini-badge-footer"><b class="mb-logo mb-booking">B.</b> Booking.com</span>
+      <span class="mini-badge mini-badge-footer"><b class="mb-logo mb-trivago">tr</b> trivago</span>
+      <span class="mini-badge mini-badge-footer"><b class="mb-logo mb-turismo">TC</b> Turismocity</span>
+      <span class="mini-badge mini-badge-footer"><b class="mb-logo mb-despegar">D</b> Despegar</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <p>© <span id="anio">2026</span> Hotel Costa Azul — Demo Plan Estándar</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== 6. MODAL DE CONFIRMACIÓN ===================== -->
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+  <div class="modal-fondo" data-cerrar></div>
+  <div class="modal-caja">
+    <button class="modal-x" type="button" data-cerrar aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+
+    <div id="modal-form">
+      <h3 id="modal-titulo">Datos del huésped</h3>
+      <p class="modal-sub">Ingresa tus datos para generar el código de reserva.</p>
+      <form id="form-reserva" novalidate>
+        <label for="f-nombre">Nombre completo</label>
+        <input type="text" id="f-nombre" placeholder="Ej: Ana Torres" autocomplete="name">
+        <label for="f-email">Email</label>
+        <input type="email" id="f-email" placeholder="tucorreo@ejemplo.cl" autocomplete="email">
+        <label for="f-fono">Teléfono</label>
+        <input type="tel" id="f-fono" placeholder="+56 9 1234 5678" autocomplete="tel">
+        <p class="f-error" id="f-error" role="alert" hidden></p>
+        <div class="modal-acciones">
+          <button type="button" class="btn btn-secundario" data-cerrar>Volver</button>
+          <button type="submit" class="btn btn-primario">Confirmar y generar código</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="modal-exito" hidden>
+      <div class="exito-icono" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h3>¡Reserva confirmada!</h3>
+      <p class="modal-sub">Presenta este código al momento del check-in.</p>
+      <div class="exito-codigo" id="exito-codigo">CAZ-2026-XXXXX</div>
+
+      <div class="comprobante" id="comprobante"></div>
+
+      <div class="modal-acciones">
+        <button type="button" class="btn btn-secundario" id="btn-imprimir">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Imprimir comprobante
+        </button>
+        <button type="button" class="btn btn-primario" id="btn-aceptar">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox de galería -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Visor de galería">
+  <div class="lb-fondo" data-lb-cerrar></div>
+  <button class="lb-btn lb-cerrar" type="button" data-lb-cerrar aria-label="Cerrar visor">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <button class="lb-btn lb-prev" type="button" id="lb-prev" aria-label="Imagen anterior">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+  </button>
+  <figure class="lb-fig">
+    <div class="lb-img" id="lb-img"></div>
+    <figcaption class="lb-cap" id="lb-cap"></figcaption>
+  </figure>
+  <button class="lb-btn lb-next" type="button" id="lb-next" aria-label="Imagen siguiente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+  </button>
+</div>
+
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

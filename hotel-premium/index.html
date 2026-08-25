@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grand Aurora Resort &amp; Spa — Lujo frente al mar</title>
+<meta name="description" content="Grand Aurora Resort & Spa: resort 5 estrellas con suites de lujo, gastronomía de autor, spa y servicio a la habitación 24/7.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23121417'/%3E%3Ctext x='16' y='21' font-family='Georgia' font-size='12' fill='%23E3C87F' text-anchor='middle'%3EGA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600;6..96,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader" aria-hidden="true"><span class="pre-mono">GA</span></div>
+
+<!-- ============ HEADER ============ -->
+<header id="header">
+  <div class="container nav-bar">
+    <a href="#inicio" class="brand">
+      <span class="brand-mark">GA</span>
+      <span class="brand-name">Grand Aurora<small>Resort &amp; Spa</small></span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#suites">Suites</a></li>
+        <li><a href="#experiencias">Experiencias</a></li>
+        <li><a href="#gastronomia">Gastronomía</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#servicio">Servicio al cuarto</a></li>
+        <li><a href="#reservar" class="btn btn-gold btn-sm">Reservar</a></li>
+      </ul>
+    </nav>
+    <button class="hamb" id="hamb" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 1440 500" preserveAspectRatio="xMidYMax slice">
+      <g fill="none" stroke="#E3C87F" stroke-opacity=".35" stroke-width="1.5">
+        <path d="M0 470 Q360 440 720 465 T1440 455"/>
+        <path d="M0 485 Q360 460 720 480 T1440 472"/>
+      </g>
+      <g fill="#0B0D10">
+        <path d="M120 470 V300 h40 v170 z"/><path d="M100 300 h80 l-40 -46 z"/>
+        <path d="M1310 470 V260 h50 v210 z"/><path d="M1288 260 h94 l-47 -54 z"/>
+      </g>
+      <g stroke="#E3C87F" stroke-opacity=".5" stroke-width="2" fill="none">
+        <path d="M340 470 q6 -80 -22 -120 M340 470 q-2 -70 26 -112 M340 470 q14 -60 44 -84"/>
+        <path d="M1120 470 q6 -80 -22 -120 M1120 470 q-2 -70 26 -112 M1120 470 q14 -60 44 -84"/>
+      </g>
+      <g fill="#E3C87F"><circle cx="240" cy="90" r="1.6"/><circle cx="560" cy="60" r="1.3"/><circle cx="880" cy="110" r="1.6"/><circle cx="1200" cy="70" r="1.3"/><circle cx="700" cy="140" r="1.2"/><circle cx="1020" cy="46" r="1.5"/></g>
+    </svg>
+  </div>
+  <div class="container hero-content">
+    <p class="kicker reveal">Bahía Serena · Chile</p>
+    <h1 class="reveal">El lujo se siente,<br>no se explica</h1>
+    <p class="lead reveal">Suites frente al mar, gastronomía de autor y un spa que detiene el tiempo. Bienvenido al Grand Aurora.</p>
+
+    <!-- Widget de reserva -->
+    <form class="booking-bar reveal" id="bookingBar" novalidate>
+      <div class="bb-field">
+        <label for="bb-in">Llegada</label>
+        <input type="date" id="bb-in" required>
+      </div>
+      <div class="bb-field">
+        <label for="bb-out">Salida</label>
+        <input type="date" id="bb-out" required>
+      </div>
+      <div class="bb-field">
+        <label for="bb-guests">Huéspedes</label>
+        <select id="bb-guests"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+      </div>
+      <div class="bb-field">
+        <label for="bb-promo">Cupón (opcional)</label>
+        <input type="text" id="bb-promo" placeholder="Ej: LUJO15" autocomplete="off">
+      </div>
+      <button type="submit" class="btn btn-gold">Consultar disponibilidad</button>
+    </form>
+    <p class="bb-error" id="bbError" role="alert"></p>
+  </div>
+</section>
+
+<!-- ============ SUITES ============ -->
+<section class="section" id="suites">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="kicker">Suites</p>
+      <h2>Doce espacios, cuatro maneras de quedarse</h2>
+      <p class="sec-sub">Tarifas vigentes publicadas por nuestro equipo de revenue — se actualizan en tiempo real.</p>
+    </div>
+    <div class="suites-grid" id="suitesGrid"><!-- JS renderiza desde GA.db --></div>
+  </div>
+</section>
+
+<!-- ============ DISPONIBILIDAD / RESERVA ============ -->
+<section class="section section-deep" id="reservar">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="kicker">Reserva directa</p>
+      <h2>Disponibilidad en tiempo real</h2>
+      <p class="sec-sub" id="availHint">Selecciona tus fechas en el buscador para ver la disponibilidad actual.</p>
+    </div>
+
+    <div id="availResults" class="avail-grid" hidden></div>
+
+    <!-- Builder de paquete -->
+    <div id="builder" class="builder" hidden>
+      <div class="builder-steps">
+        <div class="bstep">
+          <h3><span>1</span> Tu suite</h3>
+          <p id="builderRoom" class="bstep-note"></p>
+        </div>
+        <div class="bstep">
+          <h3><span>2</span> Comidas</h3>
+          <div id="mealOptions" class="opt-grid"></div>
+        </div>
+        <div class="bstep">
+          <h3><span>3</span> Actividades</h3>
+          <div id="actOptions" class="opt-grid"></div>
+        </div>
+      </div>
+
+      <aside class="summary">
+        <h3>Resumen de tu estancia</h3>
+        <dl id="summaryLines"></dl>
+        <div class="summary-total"><span>Total</span><b id="summaryTotal">$0</b></div>
+        <button class="btn btn-gold btn-block" id="btnConfirm">Confirmar reserva</button>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCIAS ============ -->
+<section class="section" id="experiencias">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="kicker">Experiencias</p>
+      <h2>Días que no se olvidan</h2>
+    </div>
+    <div class="exp-grid">
+      <article class="exp-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18 9.5l-4.1 1.9L12 16l-1.9-4.6L6 9.5l4.1-1.9z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg>
+        <h3>Spa &amp; Wellness</h3><p>Rituales de 90 minutos, sauna húmedo y piscina temperada con vista al océano.</p>
+      </article>
+      <article class="exp-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17c2 0 2.5 1.5 4.5 1.5S9 17 11 17s2.5 1.5 4.5 1.5S18 17 20 17"/><path d="M2 21c2 0 2.5 1.5 4.5 1.5S9 21 11 21s2.5 1.5 4.5 1.5S18 21 20 21"/><path d="M12 3v10"/><path d="M12 3c3 0 5 2 5 5l-5-2"/></svg>
+        <h3>Piscina infinita</h3><p>Borde infinito a 40 metros de altura, abierta todo el año de 7:00 a 23:00.</p>
+      </article>
+      <article class="exp-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.4"/><path d="M8 16L20 4"/><path d="M14 8l2 2"/></svg>
+        <h3>Golf 18 hoyos</h3><p>Cancha diseñada junto al acantilado, con green fees preferentes para huéspedes.</p>
+      </article>
+      <article class="exp-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><path d="M5 5l2.5 2.5M19 19l-2.5-2.5M19 5l-2.5 2.5M5 19l2.5-2.5"/></svg>
+        <h3>Helipuerto</h3><p>Traslados privados desde el aeropuerto en 12 minutos, con concierge dedicado.</p>
+      </article>
+      <article class="exp-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17h16"/><path d="M6 17a6 6 0 0112 0"/><path d="M12 11V9"/><path d="M10 9h4"/><path d="M12 5V3"/></svg>
+        <h3>Gastronomía de autor</h3><p>Dos restaurantes de autor y una cava con 400 etiquetas del nuevo mundo.</p>
+      </article>
+      <article class="exp-card reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg>
+        <h3>Kids club</h3><p>Programa diario para los más pequeños con monitores certificados.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GASTRONOMÍA ============ -->
+<section class="section section-deep" id="gastronomia">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="kicker">Gastronomía</p>
+      <h2>Tres mesas, un mismo estándar</h2>
+    </div>
+    <div class="gastro-grid">
+      <article class="gastro-card reveal">
+        <div class="gastro-photo gp-1"></div>
+        <div class="gastro-body">
+          <h3>Aurora</h3>
+          <p class="gastro-tag">Cocina de autor · Cena 19:30 – 23:00</p>
+          <p>Menú degustación de 7 tiempos con productos de la bahía. Recomendamos reservar con 48 horas.</p>
+        </div>
+      </article>
+      <article class="gastro-card reveal">
+        <div class="gastro-photo gp-2"></div>
+        <div class="gastro-body">
+          <h3>Marea</h3>
+          <p class="gastro-tag">Cocina de día · 12:00 – 17:00</p>
+          <p>Almuerzos junto a la piscina: pescados, crudos y vegetales de nuestra huerta.</p>
+        </div>
+      </article>
+      <article class="gastro-card reveal">
+        <div class="gastro-photo gp-3"></div>
+        <div class="gastro-body">
+          <h3>Cava &amp; Bar Celeste</h3>
+          <p class="gastro-tag">Bar · 17:00 – 01:00</p>
+          <p>Coctelería de autor, destilados de colección y música en vivo los fines de semana.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIO A LA HABITACIÓN ============ -->
+<section class="section" id="servicio">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="kicker">Servicio a la habitación</p>
+      <h2>Pide desde tu suite, 24/7</h2>
+      <p class="sec-sub">Tu pedido llega directo a cocina y puedes seguirlo desde recepción.</p>
+    </div>
+    <div class="rs-wrap">
+      <div class="rs-menu" id="rsMenu"><!-- JS renderiza el menú --></div>
+      <aside class="rs-order">
+        <h3>Tu pedido</h3>
+        <div id="rsItems" class="rs-items"><p class="rs-empty" id="rsEmpty">Aún no agregas ítems.</p></div>
+        <div class="rs-subtotal"><span>Subtotal</span><b id="rsTotal">$0</b></div>
+        <div class="field">
+          <label for="rsRoom">N° de habitación</label>
+          <select id="rsRoom"></select>
+        </div>
+        <div class="field">
+          <label for="rsGuest">Nombre del huésped</label>
+          <input type="text" id="rsGuest" placeholder="Ej: Sofía Campos" autocomplete="name">
+        </div>
+        <p class="error" id="rsError" role="alert"></p>
+        <button class="btn btn-gold btn-block" id="rsSend">Enviar pedido a cocina</button>
+        <p class="rs-success" id="rsSuccess" role="status"></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERÍA ============ -->
+<section class="section section-deep" id="galeria">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="kicker">Galería</p>
+      <h2>El resort en imágenes</h2>
+    </div>
+    <div class="masonry">
+      <figure class="m-item tall ga1 reveal" data-caption="Suite Presidencial" tabindex="0"><figcaption>Suite Presidencial</figcaption></figure>
+      <figure class="m-item ga2 reveal" data-caption="Piscina infinita" tabindex="0"><figcaption>Piscina infinita</figcaption></figure>
+      <figure class="m-item ga3 reveal" data-caption="Restaurante Aurora" tabindex="0"><figcaption>Restaurante Aurora</figcaption></figure>
+      <figure class="m-item tall ga4 reveal" data-caption="Lobby nocturno" tabindex="0"><figcaption>Lobby nocturno</figcaption></figure>
+      <figure class="m-item ga5 reveal" data-caption="Spa & Wellness" tabindex="0"><figcaption>Spa &amp; Wellness</figcaption></figure>
+      <figure class="m-item ga6 reveal" data-caption="Villa Privada" tabindex="0"><figcaption>Villa Privada</figcaption></figure>
+      <figure class="m-item tall ga7 reveal" data-caption="Vista al mar" tabindex="0"><figcaption>Vista al mar</figcaption></figure>
+      <figure class="m-item ga8 reveal" data-caption="Bar Celeste" tabindex="0"><figcaption>Bar Celeste</figcaption></figure>
+      <figure class="m-item ga9 reveal" data-caption="Terraza Suite Ejecutiva" tabindex="0"><figcaption>Terraza Suite Ejecutiva</figcaption></figure>
+      <figure class="m-item ga10 reveal" data-caption="Jardines" tabindex="0"><figcaption>Jardines</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CANALES ============ -->
+<section class="section" id="canales">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="kicker">Canales de venta</p>
+      <h2>También nos encuentras en</h2>
+      <p class="sec-sub">Tarifas y disponibilidad sincronizadas con los principales portales.</p>
+    </div>
+    <div class="channels-grid" id="channelsGrid"><!-- JS renderiza desde GA.db --></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section class="section section-deep" id="opiniones">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="kicker">Opiniones</p>
+      <h2>Huéspedes que vuelven</h2>
+    </div>
+    <div class="quotes-grid">
+      <blockquote class="quote reveal"><p>“Pedimos la cena degustación a la villa y llegó impecable. El nivel de detalle no se ve ni en Europa.”</p><footer>Valentina R. — Buenos Aires</footer></blockquote>
+      <blockquote class="quote reveal"><p>“El spa al atardecer y la piscina infinita son de otro planeta. Reservamos directo y nos aplicaron el cupón LUJO15.”</p><footer>Martín H. — Santiago</footer></blockquote>
+      <blockquote class="quote reveal"><p>“Celebramos nuestra luna de miel aquí: nos prepararon la suite con pétalos y champán. Memoria para toda la vida.”</p><footer>Sofía &amp; Andrés — Lima</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section" id="contacto">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <p class="kicker">Contacto</p>
+      <h2>Concierge a tu disposición</h2>
+      <p class="sec-sub">Atención personalizada 24/7 para reservas, eventos y experiencias a medida.</p>
+      <ul class="info-list" id="contactInfo"><!-- JS renderiza desde GA.db.settings --></ul>
+    </div>
+    <div class="map-card reveal" role="img" aria-label="Mapa ilustrado de la ubicación del resort">
+      <svg viewBox="0 0 400 260" aria-hidden="true">
+        <rect width="400" height="260" fill="#101318"/>
+        <path d="M0 190 Q140 150 400 185 L400 260 L0 260 Z" fill="#1B2530"/>
+        <path d="M0 200 Q160 170 400 205" stroke="#E3C87F" stroke-opacity=".4" stroke-width="2" fill="none"/>
+        <path d="M40 40 Q140 20 260 50 T400 40" stroke="#2A3442" stroke-width="16" fill="none"/>
+        <path d="M60 130 Q180 100 400 130" stroke="#232C38" stroke-width="12" fill="none"/>
+        <g transform="translate(235,120)">
+          <path d="M0 44 C-20 22 -26 12 -26 2 A26 26 0 1126 2 C26 12 20 22 0 44z" fill="#C9A24B"/>
+          <circle cx="0" cy="0" r="10" fill="#121417"/>
+        </g>
+        <text x="235" y="190" text-anchor="middle" font-family="Georgia" font-size="15" fill="#E3C87F">Grand Aurora</text>
+      </svg>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <span class="brand-mark">GA</span>
+      <p>Grand Aurora Resort &amp; Spa<br>El lujo se siente, no se explica.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#suites">Suites</a></li>
+      <li><a href="#experiencias">Experiencias</a></li>
+      <li><a href="#gastronomia">Gastronomía</a></li>
+      <li><a href="#servicio">Servicio al cuarto</a></li>
+      <li><a href="admin.html" class="staff-link">Acceso staff</a></li>
+    </ul>
+    <div class="social">
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 3h-2.5A3.5 3.5 0 009 6.5V9H6.5v3H9v9h3.5v-9h2.6l.4-3h-3V6.8c0-.7.3-1.3 1.5-1.3H15z"/></svg></a>
+      <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.6-1.2A9 9 0 1012 3z"/><path d="M9 8.8c.6 2.6 3.6 5.6 6.2 6.2l1-1.4-2.2-1.1-1 .7c-.8-.5-1.5-1.2-2-2l.7-1L10.6 8z"/></svg></a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> Grand Aurora Resort &amp; Spa — Demo Plan Premium</p>
+  </div>
+</footer>
+
+<!-- ============ MODAL CONFIRMACIÓN DE RESERVA ============ -->
+<div class="modal" id="modalGuest" hidden>
+  <div class="modal-card">
+    <h3>Completa tu reserva</h3>
+    <div class="field"><label for="mgName">Nombre completo</label><input type="text" id="mgName" autocomplete="name"></div>
+    <div class="field"><label for="mgEmail">Email</label><input type="email" id="mgEmail" autocomplete="email"></div>
+    <p class="error" id="mgError" role="alert"></p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost-dark" id="mgCancel">Volver</button>
+      <button class="btn btn-gold" id="mgOk">Emitir reserva</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modalSuccess" hidden>
+  <div class="modal-card success-card">
+    <div class="print-area" id="printArea">
+      <p class="kicker">Reserva confirmada</p>
+      <h3 class="success-code" id="resCode">GA-2026-XXXXX</h3>
+      <dl id="resSummary" class="res-summary"></dl>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost-dark" id="btnPrint">Imprimir comprobante</button>
+      <button class="btn btn-gold" id="btnDone">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de galería" hidden>
+  <button class="lb-close" id="lbClose" aria-label="Cerrar galería">×</button>
+  <button class="lb-prev" id="lbPrev" aria-label="Imagen anterior">‹</button>
+  <figure class="lb-figure"><div class="lb-image" id="lbImage"></div><figcaption id="lbCaption"></figcaption></figure>
+  <button class="lb-next" id="lbNext" aria-label="Imagen siguiente">›</button>
+</div>
+
+<button id="toTop" class="to-top" aria-label="Volver arriba" hidden>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
